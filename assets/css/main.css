@@ -871,6 +871,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
+  animation: updown 3s linear infinite;
   max-width: 945px;
   height: 950px;
 }
@@ -879,6 +880,11 @@ p {
   height: 100%;
 }
 
+@keyframes updown {
+  50% {
+    transform: translateY(10px);
+  }
+}
 .smart-wrapper {
   position: relative;
   z-index: 1;
@@ -2123,6 +2129,7 @@ p {
   border-radius: 10px;
   padding: 15px 15px;
   border: 1px solid #e2dafb;
+  transition: all 0.4s;
 }
 .contact-form-right .contact li:not(:last-child) {
   margin-bottom: 25px;
@@ -2135,6 +2142,7 @@ p {
   background-color: #ebe5ff;
   border-radius: 50%;
   margin-right: 15px;
+  transition: all 0.4s;
 }
 .contact-form-right .contact li .email-part {
   width: calc(100% - 90px);
@@ -2146,6 +2154,14 @@ p {
   display: block;
   font-weight: 400;
   font-size: 24px;
+}
+.contact-form-right .contact li:hover {
+  background: rgba(255, 255, 255, 0.7921568627);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.contact-form-right .contact li:hover .phone-icon {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .contact-form-right .found {
   padding-top: 25px;

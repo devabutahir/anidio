@@ -7,11 +7,17 @@
         position: absolute;
         left: 0;
         top: 0;
+        animation: updown 3s linear infinite;
         max-width: 945px;
         height: 950px;
         img{
             @include imgw;
         }
+    }
+}
+@keyframes updown {
+    50%{
+        transform: translateY(10px);
     }
 }
 .smart-wrapper{
@@ -1333,6 +1339,7 @@
                 background-color: #ebe5ff;
                 border-radius: 50%;
                 margin-right: 15px;
+                transition: all 0.4s;
             }
             .email-part{
                 width: calc(100% - 90px);
@@ -1349,6 +1356,15 @@
             border-radius: 10px;
             padding: 15px 15px;
             border: 1px solid #e2dafb;
+            transition: all 0.4s;
+            &:hover{
+                background: #ffffffca;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                .phone-icon{
+                    background-color: #fff;
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                }
+            }
         }
     }
     .found{
